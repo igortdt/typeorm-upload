@@ -1,0 +1,12 @@
+##Criar imagem postgres no docker
+docker run --name gostack-bd -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
+
+##listar instancias
+docker ps
+
+##Criar  migration
+yarn typeorm migration:create -n CreateCategory
+
+## Executar migration
+yarn typeorm migration:run
+
